@@ -19,6 +19,13 @@ app.use("/product", productRouter);
 //Import Table Router
 const tableRouter = require("./routes/Table");
 app.use("/table", tableRouter);
+
+//Import Order Router
+const orderRouter = require("./routes/Order");
+app.use("/order", orderRouter);
+
+const statistical = require("./routes/Statistical");
+app.use("/statis", statistical);
 //connect to DB
 mongooso.connect(
   process.env.DB_CONNECTION,
